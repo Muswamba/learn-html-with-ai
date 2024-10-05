@@ -1,0 +1,347 @@
+/* General Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   margin-bottom: 10px;
+}
+body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #000000;
+   padding: 0;
+   margin: 0;
+   min-height: 100vh;
+   display: block;
+}
+
+/* Light mode styles */
+body.light-mode {
+   background-color: #ffffff;
+   color: #333333;
+}
+
+body.light-mode header,
+footer {
+   background-color: #f0f0f0;
+   color: #333;
+}
+body.light-mode .articles article,
+body.light-mode .articles article p,
+body.light-mode .articles article h2 {
+   background-color: #f9f9f9;
+   color: #333;
+}
+
+body.light-mode .articles article {
+   background-color: #f9f9f9;
+   color: #333;
+}
+
+body.light-mode .nav-links a {
+   color: #333;
+}
+
+body.light-mode footer {
+   background-color: #f0f0f0;
+   color: #333;
+}
+
+body.light-mode .footer-menu a {
+   color: #333;
+}
+
+body.light-mode .theme-toggle {
+   background-color: #333;
+   color: #fff;
+}
+
+/* Ensure paragraphs in dark mode also have the correct color */
+body .articles article p,
+body .articles article h2 {
+   color: #ffffff;
+}
+
+/* Light mode styles */
+body.light-mode input {
+   background-color: #f0f0f0; /* Light background for inputs */
+   color: #333; /* Dark text */
+   border: 1px solid #ccc; /* Light border */
+}
+
+/* Dark mode styles */
+body input {
+   background-color: #333; /* Dark background for inputs */
+   color: #fff; /* Light text */
+   border: 1px solid #555; /* Dark border */
+}
+
+/* Header and Nav Styles */
+header {
+   background-color: #333;
+   color: #fff;
+   padding: 10px 20px;
+   display: flex;
+}
+
+.flex {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.nav-links {
+   list-style-type: none;
+   display: flex; /* Flex on larger screens */
+}
+
+.nav-links li {
+   margin: 0 15px;
+}
+
+.nav-links a {
+   color: #fff;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+.logo {
+   font-size: 24px;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+/* Articles Section */
+.articles {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr); /* Default to one column */
+   gap: 20px;
+   max-width: 1100px;
+   margin: 20px auto;
+   padding: 0 20px;
+}
+
+.articles article {
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(80, 94, 154, 0.608);
+}
+
+.articles img {
+   max-width: 100%;
+   border-radius: 10px;
+   /* cover */
+   object-fit: cover;
+}
+
+.articles h2 {
+   font-size: 20px;
+   margin-top: 10px;
+}
+
+.articles p {
+   margin-top: 10px;
+}
+
+.articles a {
+   display: inline-block;
+   margin-top: 10px;
+   text-decoration: none;
+   font-weight: bold;
+   border: 1px solid #333;
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+/* Responsive grid layout */
+@media (min-width: 1024px) {
+   .articles {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+   }
+}
+
+/* Block layout for small screens */
+@media (max-width: 768px) {
+   .articles {
+      grid-template-columns: 1fr; /* One column on smaller screens */
+   }
+}
+
+/* Hide toggle button on larger screens */
+.nav-toggle {
+   display: none;
+   background-color: #333;
+   color: white;
+   border: none;
+   padding: 10px;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+/* Show the toggle button on smaller screens */
+@media (max-width: 768px) {
+   .nav-toggle {
+      display: block;
+   }
+
+   .nav-links {
+      display: none; /* Hidden by default on small screens */
+      text-align: center;
+      margin-top: 10px;
+   }
+
+   .nav-links.active {
+      display: block; /* Show the links when nav-toggle is clicked */
+   }
+
+   .nav-links li {
+      margin: 10px 0;
+   }
+}
+
+footer {
+   background-color: #121315;
+   color: #8b8a8a;
+   font-size: 16px;
+}
+footer * {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+}
+.row {
+   padding: 1em 1em;
+}
+.row.primary {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr 2fr;
+   align-items: stretch;
+}
+.column {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 0 2em;
+   min-height: 15em;
+}
+h3 {
+   width: 100%;
+   text-align: left;
+   font-size: 1.4em;
+   white-space: nowrap;
+}
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+ul li a {
+   color: #9fa6ad; /* Slightly darker for better contrast */
+   text-decoration: none;
+}
+ul li a:hover {
+   color: #2a8ded;
+}
+.about p {
+   text-align: justify;
+   line-height: 2;
+   margin: 0;
+}
+input,
+.btn {
+   font-size: 1em;
+   padding: 1em;
+   width: 100%;
+   border-radius: 5px;
+   margin-bottom: 5px;
+}
+.btn {
+   background-color: #10ae64;
+   color: #ffffff;
+}
+div.social {
+   display: flex;
+   justify-content: space-around;
+   font-size: 2.4em;
+   flex-direction: row;
+   margin-top: 0.5em;
+}
+
+.copyright {
+   padding: 0.3em 1em;
+}
+.footer-menu {
+   float: left;
+   margin-top: 10px;
+}
+
+.footer-menu a {
+   color: #7a7d81;
+   padding: 6px;
+
+   text-decoration: none;
+}
+.footer-menu a:hover {
+   color: #27bcda;
+}
+.copyright p {
+   font-size: 0.9em;
+   text-align: right;
+}
+@media screen and (max-width: 850px) {
+   .header-column {
+      display: block;
+      text-align: center;
+   }
+   .row.primary {
+      grid-template-columns: 1fr;
+   }
+}
+
+.sr-only {
+   display: none;
+}
+
+.header-column {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+.items-center {
+   align-items: center;
+}
+.border {
+   border: 1px solid #ccc;
+}
+.border-top {
+   border-top: 1px solid #ccc;
+}
+.underline {
+   text-decoration: underline;
+}
+.underline:hover {
+   text-decoration: none;
+}
+.w-full {
+   width: 100%;
+}
+
+.pl-1 {
+   padding-left: 10px;
+}
